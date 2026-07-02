@@ -36,6 +36,7 @@ public class LoginPage {
     public void clickLogin() {
         logger.info("Clicking Login button");
         waitHelper.waitForElementVisible(btnLogin).click();
+        // Login feature branch
     }
 
     public void login(String username, String password) {
