@@ -23,7 +23,7 @@ public class LoginPage {
     By txtError = By.cssSelector("h3[data-test='error']");
 
     public void enterUsername(String username) {
-        logger.info("Entering username");
+        logger.info("Entering username - Rebase Demo");
 
         waitHelper.waitForElementVisible(txtUsername).sendKeys(username);
     }
