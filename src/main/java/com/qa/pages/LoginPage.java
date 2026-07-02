@@ -43,6 +43,7 @@ public class LoginPage {
         enterUsername(username);
         enterPassword(password);
         clickLogin();
+        // Login feature branch
     }
         public String getErrorMessage() {
             return driver.findElement(txtError).getText();
