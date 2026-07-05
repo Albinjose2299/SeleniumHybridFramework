@@ -10,6 +10,7 @@ import com.qa.utilities.ConfigReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Parameters;
+import org.testng.annotations.Optional;
 
 public class BaseTest {
     public static Logger logger = LogManager.getLogger(BaseTest.class);
@@ -21,7 +22,7 @@ public class BaseTest {
     ConfigReader configReader = new ConfigReader();
     @Parameters("browser")
     @BeforeMethod
-    public void setup(String browser) {
+    public void setup(@Optional("chrome") String browser) {
 
 
         if (browser.equalsIgnoreCase("chrome")) {

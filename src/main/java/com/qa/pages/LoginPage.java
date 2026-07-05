@@ -29,7 +29,7 @@ public class LoginPage {
     }
 
     public void enterPassword(String password) {
-        logger.info("Entering password - Main Branch");
+        logger.info("Entering Password");
 
         waitHelper.waitForElementVisible(txtPassword).sendKeys(password);
     }
