@@ -34,7 +34,7 @@ public class LoginTest extends BaseTest {
 
         System.out.println("Page Title: " + actualTitle);
 
-        Assert.assertEquals(actualTitle, "Google");
+        Assert.assertEquals(actualTitle, "Swag Labs");
     }
 
     @Test

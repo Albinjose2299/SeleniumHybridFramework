@@ -11,6 +11,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Optional;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class BaseTest {
     public static Logger logger = LogManager.getLogger(BaseTest.class);
@@ -31,7 +32,15 @@ public class BaseTest {
 
             logger.info("Launching Chrome browser");
 
-            driver.set(new ChromeDriver());
+            ChromeOptions options = new ChromeOptions();
+
+           options.addArguments("--headless=new");
+           options.addArguments("--no-sandbox");
+          options.addArguments("--disable-dev-shm-usage");
+           options.addArguments("--window-size=1920,1080");
+
+            driver.set(new ChromeDriver(options));
+
 
         } else if (browser.equalsIgnoreCase("edge")) {
 
